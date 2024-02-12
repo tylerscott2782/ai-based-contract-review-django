@@ -9,10 +9,11 @@
                 <div class="header">
                     <div class="title">AI Contract Scanner</div>
                 </div>
-                <div class="upload-button" onclick="document.getElementById('contract_upload').click();">
-                    Upload New Contract
-                    <input id="contract_upload" type="file" accept=".pdf,.docx" />
-                </div>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" value="Submit">
+                </form>
                 <div class="table">
                     <div class="row table-header">
                         <div class="cell" data-col="name">
